@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import { Icon } from 'react-native-elements';
 
-import Icon from './Icon';
 
-function FieldCard({text, value}) {
+function FieldCard({ text, value, iconName }) {
   return (
     <View style={styles.wrapper}>
-      <Icon />
-      <Text>
+      <Icon name={iconName} size={40}  color="#0c3866"/>
+      <Text style={styles.titleText}>
         {text}
       </Text>
-      <Text>
+      <Text style={styles.fieldValue}>
         {value}
       </Text>
     </View>
@@ -19,12 +19,27 @@ function FieldCard({text, value}) {
 
 const styles = StyleSheet.create({
   wrapper: {
-    height: 150,
+    height: "20%",
     width: "40%",
-    padding: 20,
-    margin: 20,
-    backgroundColor: '#fff'
-  }
+    padding: 10,
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 10
+  },
+  titleText: {
+    fontWeight: 'bold',
+    paddingBottom: 5,
+    fontSize: 16,
+    color: '#0c3866'
+  },
+  fieldValue: {
+    fontSize: 18,
+    letterSpacing: 1.5,
+    color: '#0c3866',
+    fontWeight: 'bold',
+  },
 });
 
 export default FieldCard;

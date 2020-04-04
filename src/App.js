@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar} from 'react-native';
+import { View } from 'react-native';
 
-import Home from './screens/Home'
+import Dashboard from './screens/Dashboard'
 
 
-export default class App extends Component {
-  render() {
-    return (
-      <View>
-        <Home/>
-      </View>
-    );
-  }
+export default function App(){
+  return (
+    <View>
+      <Dashboard/>
+    </View>
+  );
 }
